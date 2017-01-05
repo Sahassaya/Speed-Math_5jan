@@ -146,6 +146,8 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
                 break;
         }   // switch
 
+
+
         playController();
 
     }   // onClick
