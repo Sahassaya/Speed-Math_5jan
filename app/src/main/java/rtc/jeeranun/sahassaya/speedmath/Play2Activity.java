@@ -177,13 +177,6 @@ public class Play2Activity extends AppCompatActivity implements View.OnClickList
         } //for
         if (scoreAnInt <3) {
             imageViews[0].setVisibility(View.VISIBLE);
-
-            //ได้ 3 ข้อไปเลย
-            MyAlert myAlert = new MyAlert(Play2Activity.this,
-                    "ผ่านด่านที่ 1", "ยินดีด้วยผ่านด่านที่ 1 แล้ว", Play3Activity.class);
-            myAlert.myDialog();
-
-
         } else if (scoreAnInt < 6) {
             imageViews[1].setVisibility(View.VISIBLE);
         } else if (scoreAnInt <9) {
@@ -199,9 +192,9 @@ public class Play2Activity extends AppCompatActivity implements View.OnClickList
 
             //เฉพาะกิด
 
-//            MyAlert myAlert = new MyAlert(PlayActivity.this,
-//                    "ผ่านด่านที่ 1", "ยินดีด้วยผ่านด่านที่ 1 แล้ว", Play2.class);
-//            myAlert.myDialog();
+            MyAlert myAlert = new MyAlert(Play2Activity.this,
+                    "ผ่านด่านที่ 1", "ยินดีด้วยผ่านด่านที่ 2 แล้ว", Play3Activity.class);
+            myAlert.myDialog();
 
         }
 
