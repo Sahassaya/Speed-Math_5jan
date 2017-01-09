@@ -1,9 +1,9 @@
 package rtc.jeeranun.sahassaya.speedmath;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,7 +11,9 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public abstract class Play2Activity extends AppCompatActivity implements View.OnClickListener {
+public class Play2Activity extends AppCompatActivity implements View.OnClickListener {
+
+
     //Explicit  master
     //sahassaya
     private TextView questionTextView, ch1TextView, ch2TextView,
@@ -20,7 +22,7 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
     private int firstAnInt, secondAnInt, answerAnInt,
             trueChoiceAnInt, scoreAnInt = 0;
     private int timeAnInt = 30; // นี่คือเวลาลูป
-    private ImageView rabbit1ImageView,rabbit2ImageView,rabbit3ImageView,rabbit4ImageView;
+    private ImageView rabbit1ImageView,rabbit2ImageView,rabbit3ImageView,rabbit4ImageView,rabbit5ImageView,rabbit6ImageView, rabbit7ImageView;
     private ImageView[] imageViews;
     private ImageView heart1ImageView,heart2ImageView, heart3ImageView;
     private  int heardAnInt = 0;
@@ -31,12 +33,13 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play2);
 
+
         //Setup
         random = new Random();
 
         // Bind Widger
         questionTextView = (TextView) findViewById(R.id.textView14);
-        ch1TextView = (TextView) findViewById(R.id.textView10);
+        ch1TextView = (TextView) findViewById(R.id.textView10sp1);
         ch2TextView = (TextView) findViewById(R.id.textView11);
         ch3TextView = (TextView) findViewById(R.id.textView12);
         ch4TextView = (TextView) findViewById(R.id.textView13);
@@ -46,12 +49,15 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
         heart2ImageView = (ImageView) findViewById(R.id.imageView13);
         heart3ImageView = (ImageView) findViewById(R.id.imageView14);
         rabbit1ImageView = (ImageView) findViewById(R.id.imageView15);
-        rabbit2ImageView = (ImageView) findViewById(R.id.imageView16);
-        rabbit3ImageView = (ImageView) findViewById(R.id.imageView17);
-        rabbit4ImageView = (ImageView) findViewById(R.id.imageView18);
+        rabbit2ImageView = (ImageView) findViewById(R.id.imageView15sp1);
+        rabbit3ImageView = (ImageView) findViewById(R.id.imageView16);
+        rabbit4ImageView = (ImageView) findViewById(R.id.imageView15sp2);
+        rabbit5ImageView = (ImageView) findViewById(R.id.imageView17);
+        rabbit6ImageView = (ImageView) findViewById(R.id.imageView15sp3);
+        rabbit7ImageView = (ImageView) findViewById(R.id.imageView18);
 
         imageViews = new ImageView[]{rabbit1ImageView,rabbit2ImageView,rabbit3ImageView,
-                rabbit4ImageView};
+                rabbit4ImageView,rabbit5ImageView,rabbit6ImageView,rabbit7ImageView};
 
 
         //Click Controller
@@ -80,7 +86,9 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                countTime();
+                if (aBoolean) {
+                    countTime();
+                }
             }
         },1000);
 
@@ -122,9 +130,6 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
                 break;
         }   // switch
 
-
-
-
     }// playController
 
     @Override
@@ -132,7 +137,7 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
 
 
         switch (view.getId()) {
-            case R.id.textView10:
+            case R.id.textView10sp1:
                 checkAnswer(Integer.parseInt(ch1TextView.getText().toString()));
                 break;
             case R.id.textView11:
@@ -146,13 +151,9 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
                 break;
         }   // switch
 
-
-
         playController();
 
     }   // onClick
-
-
 
     private void checkAnswer(int intChoice) {
         Log.d("3decV1", "You Choose Answer ==> " + intChoice);
@@ -172,27 +173,39 @@ public abstract class Play2Activity extends AppCompatActivity implements View.On
         for (int i=0;i<imageViews.length;i++){
             imageViews [i].setVisibility(View.INVISIBLE);
 
+
         } //for
-        if (scoreAnInt <5) {
+        if (scoreAnInt <3) {
             imageViews[0].setVisibility(View.VISIBLE);
-        } else if (scoreAnInt <10) {
-            imageViews[1].setVisibility(View.VISIBLE);
-        } else if (scoreAnInt <15) {
-            imageViews[2].setVisibility(View.VISIBLE);
-        } else if (scoreAnInt <20) {
-            imageViews[3].setVisibility(View.VISIBLE);
 
-            MyAlert myAlert = new MyAlert(Play2Activity.this, "ผ่านด่านที่ 2", "ยินดีด้วยผ่านด่านที่ 2 แล้ว", Play3Activity.class);
-
+            //ได้ 3 ข้อไปเลย
+            MyAlert myAlert = new MyAlert(Play2Activity.this,
+                    "ผ่านด่านที่ 1", "ยินดีด้วยผ่านด่านที่ 1 แล้ว", Play3Activity.class);
             myAlert.myDialog();
+
+
+        } else if (scoreAnInt < 6) {
+            imageViews[1].setVisibility(View.VISIBLE);
+        } else if (scoreAnInt <9) {
+            imageViews[2].setVisibility(View.VISIBLE);
+        } else if (scoreAnInt <12) {
+            imageViews[3].setVisibility(View.VISIBLE);
+        } else if (scoreAnInt <15) {
+            imageViews[4].setVisibility(View.VISIBLE);
+        } else if (scoreAnInt < 18) {
+            imageViews[5].setVisibility(View.VISIBLE);
+        } else {
+            imageViews[6].setVisibility(View.VISIBLE);
+
+            //เฉพาะกิด
+
+//            MyAlert myAlert = new MyAlert(PlayActivity.this,
+//                    "ผ่านด่านที่ 1", "ยินดีด้วยผ่านด่านที่ 1 แล้ว", Play2.class);
+//            myAlert.myDialog();
 
         }
 
-
-
-
     }  //checkanser
-
 
 
     private void deleteHeard() {
