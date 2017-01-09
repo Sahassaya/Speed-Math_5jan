@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public abstract class Play3Activity extends AppCompatActivity implements View.OnClickListener{
+public class Play3Activity extends AppCompatActivity implements View.OnClickListener{
 
     //Explicit  master
     //sahassaya

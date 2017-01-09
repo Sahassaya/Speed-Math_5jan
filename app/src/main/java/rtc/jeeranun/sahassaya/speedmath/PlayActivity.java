@@ -86,7 +86,9 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                countTime();
+                if (aBoolean) {
+                    countTime();
+                }
             }
         },1000);
 
@@ -188,17 +190,15 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             imageViews[6].setVisibility(View.VISIBLE);
 
-            MyAlert myAlert = new MyAlert(PlayActivity.this, "ผ่านด่านที่ 1", "ยินดีด้วยผ่านด่านที่ 1 แล้ว", Play2Activity.class);
+            //เฉพาะกิด
 
+            MyAlert myAlert = new MyAlert(PlayActivity.this,
+                    "ผ่านด่านที่ 1", "ยินดีด้วยผ่านด่านที่ 1 แล้ว", Play2Activity.class);
             myAlert.myDialog();
 
         }
 
-
-
-
         }  //checkanser
-
 
 
     private void deleteHeard() {
