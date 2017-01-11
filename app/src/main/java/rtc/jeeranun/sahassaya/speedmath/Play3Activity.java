@@ -90,20 +90,20 @@ public class Play3Activity extends AppCompatActivity implements View.OnClickList
 
     private void playController() {
 
-        firstAnInt = random.nextInt(100);
-        secondAnInt = random.nextInt(100);
-        answerAnInt = firstAnInt + secondAnInt;
+        firstAnInt = random.nextInt(11);
+        secondAnInt = random.nextInt(10);
+        answerAnInt = firstAnInt * secondAnInt;
         trueChoiceAnInt = random.nextInt(4) + 1;
         Log.d("4janV1", "ข้อที่ถูก ==> " + trueChoiceAnInt);
         timeAnInt = 30;
         //Change Question
-        questionTextView.setText(Integer.toString(firstAnInt) + " + " +
+        questionTextView.setText(Integer.toString(firstAnInt) + " * " +
                 Integer.toString(secondAnInt) + " = ?");
 
         //Change Choice
         TextView[] textViews = new TextView[]{ch1TextView, ch2TextView, ch3TextView, ch4TextView};
         for (int i = 0; i < textViews.length; i++) {
-            textViews[i].setText(Integer.toString(random.nextInt(100)));
+            textViews[i].setText(Integer.toString(random.nextInt(10)));
         }
 
         switch (trueChoiceAnInt) {
@@ -184,8 +184,8 @@ public class Play3Activity extends AppCompatActivity implements View.OnClickList
         } else if (scoreAnInt <20) {
             imageViews[4].setVisibility(View.VISIBLE);
 
-            MyAlert myAlert = new MyAlert(Play3Activity.this, "ผ่านด่านที่ 3", "ยินดีด้วยผ่านด่านที่ 3 แล้ว", Play4Activity.class);
-
+            MyAlert myAlert = new MyAlert(Play3Activity.this,
+                    "ผ่านด่านที่ 3", "ยินดีด้วยผ่านด่านที่ 3 แล้ว", Play4Activity.class);
             myAlert.myDialog();
 
         }
@@ -211,6 +211,5 @@ public class Play3Activity extends AppCompatActivity implements View.OnClickList
             finish();
         }
     }
-
 }   // Main Class
 

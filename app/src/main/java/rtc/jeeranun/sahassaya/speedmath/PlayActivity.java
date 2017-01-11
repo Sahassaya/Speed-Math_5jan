@@ -96,8 +96,8 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
 
     private void playController() {
 
-        firstAnInt = random.nextInt(100);
-        secondAnInt = random.nextInt(100);
+        firstAnInt = random.nextInt(11);
+        secondAnInt = random.nextInt(10);
         answerAnInt = firstAnInt + secondAnInt;
         trueChoiceAnInt = random.nextInt(4) + 1;
         Log.d("4janV1", "ข้อที่ถูก ==> " + trueChoiceAnInt);

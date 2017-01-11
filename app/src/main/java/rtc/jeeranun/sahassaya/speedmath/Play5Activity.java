@@ -210,4 +210,11 @@ public class Play5Activity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    public void setaBoolean(boolean aBoolean) {
+        this.aBoolean = aBoolean;
+    }
+
+    public boolean isaBoolean() {
+        return aBoolean;
+    }
 }   // Main Class

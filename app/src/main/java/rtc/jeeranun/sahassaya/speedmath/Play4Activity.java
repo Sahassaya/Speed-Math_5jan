@@ -89,12 +89,12 @@ public class Play4Activity extends AppCompatActivity implements View.OnClickList
 
         firstAnInt = random.nextInt(100);
         secondAnInt = random.nextInt(100);
-        answerAnInt = firstAnInt + secondAnInt;
+        answerAnInt = firstAnInt / secondAnInt;
         trueChoiceAnInt = random.nextInt(4) + 1;
         Log.d("4janV1", "ข้อที่ถูก ==> " + trueChoiceAnInt);
         timeAnInt = 30;
         //Change Question
-        questionTextView.setText(Integer.toString(firstAnInt) + " + " +
+        questionTextView.setText(Integer.toString(firstAnInt) + " / " +
                 Integer.toString(secondAnInt) + " = ?");
 
         //Change Choice
@@ -210,4 +210,11 @@ public class Play4Activity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    public boolean isaBoolean() {
+        return aBoolean;
+    }
+
+    public void setaBoolean(boolean aBoolean) {
+        this.aBoolean = aBoolean;
+    }
 }   // Main Class
