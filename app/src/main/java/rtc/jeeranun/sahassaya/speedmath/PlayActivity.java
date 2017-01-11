@@ -98,7 +98,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
 
         firstAnInt = random.nextInt(11);
         secondAnInt = random.nextInt(10);
-        answerAnInt = firstAnInt + secondAnInt;
+        answerAnInt = firstAnInt + secondAnInt; // นี่คือคำตอบที่ถูกต้อง
         trueChoiceAnInt = random.nextInt(4) + 1;
         Log.d("4janV1", "ข้อที่ถูก ==> " + trueChoiceAnInt);
         timeAnInt = 30;
@@ -111,6 +111,14 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < textViews.length; i++) {
             textViews[i].setText(Integer.toString(random.nextInt(100)));
         }
+
+        //สร้าง ช้อย ใกล้เคียง
+        textViews[0].setText(Integer.toString(answerAnInt + 10));
+        textViews[1].setText(Integer.toString(answerAnInt - 10));
+        textViews[2].setText(Integer.toString(answerAnInt - 2));
+        textViews[3].setText(Integer.toString(answerAnInt + 2));
+
+
 
         switch (trueChoiceAnInt) {
             case 1:
