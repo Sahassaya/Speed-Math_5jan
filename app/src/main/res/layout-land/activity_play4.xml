@@ -36,29 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/rabbit"
-        android:id="@+id/imageView33"
-        android:layout_marginTop="160dp"
-        android:layout_marginLeft="360dp"
-        android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rabbit"
-        android:id="@+id/imageView34"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="500dp"
-        android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rabbit"
-        android:id="@+id/imageView34sp1"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="430dp"
+        android:id="@+id/imageView34sp3"
+        android:layout_marginTop="215dp"
+        android:layout_marginLeft="230dp"
         android:verticalScrollbarPosition="defaultPosition"
         android:visibility="invisible" />
 
@@ -76,9 +56,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/rabbit"
-        android:id="@+id/imageView34sp3"
-        android:layout_marginTop="215dp"
-        android:layout_marginLeft="230dp"
+        android:id="@+id/imageView33"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="360dp"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rabbit"
+        android:id="@+id/imageView34sp1"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="430dp"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rabbit"
+        android:id="@+id/imageView34"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="500dp"
         android:verticalScrollbarPosition="defaultPosition"
         android:visibility="invisible" />
 
