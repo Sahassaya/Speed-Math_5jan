@@ -17,10 +17,13 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/rabbit"
         android:id="@+id/imageView45"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="18dp"
         android:verticalScrollbarPosition="defaultPosition"
-        android:layout_marginLeft="0dp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_below="@+id/imageView46"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -28,19 +31,29 @@
         app:srcCompat="@drawable/rabbit"
         android:id="@+id/imageView46"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="115dp"
+        android:layout_marginLeft="130dp"
         android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/rabbit"
-        android:id="@+id/imageView47"
+        android:id="@+id/imageView47sp1"
         android:layout_marginTop="158dp"
         android:layout_marginLeft="220dp"
         android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="invisible" />
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rabbit"
+        android:id="@+id/imageView47sp2"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="100dp"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -50,7 +63,7 @@
         android:layout_marginTop="158dp"
         android:layout_marginLeft="320dp"
         android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -60,7 +73,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginLeft="440dp"
         android:verticalScrollbarPosition="defaultPosition"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/textView38"
@@ -187,6 +200,18 @@
             android:layout_weight="1"
             android:elevation="1dp" />
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rabbit"
+        android:id="@+id/imageView47"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/imageView46"
+        android:layout_alignLeft="@+id/imageView47sp1"
+        android:layout_alignStart="@+id/imageView47sp1"
+        android:layout_marginTop="1dp" />
 
 
 </RelativeLayout>
