@@ -112,6 +112,12 @@ public class Play2Activity extends AppCompatActivity implements View.OnClickList
             textViews[i].setText(Integer.toString(random.nextInt(100)));
         }
 
+        //สร้าง ช้อย ใกล้เคียง
+        textViews[0].setText(Integer.toString(answerAnInt + 10));
+        textViews[1].setText(Integer.toString(answerAnInt - 10));
+        textViews[2].setText(Integer.toString(answerAnInt - 2));
+        textViews[3].setText(Integer.toString(answerAnInt + 2));
+
         switch (trueChoiceAnInt) {
             case 1:
                 ch1TextView.setText(Integer.toString(answerAnInt));
