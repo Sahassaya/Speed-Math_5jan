@@ -26,16 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/rabbit"
-        android:id="@+id/imageView53sp1"
-        android:layout_marginTop="160dp"
-        android:verticalScrollbarPosition="defaultPosition"
-        android:layout_marginLeft="150dp"
-        android:visibility="invisible" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rabbit"
         android:id="@+id/imageView53sp2"
         android:layout_marginTop="160dp"
         android:verticalScrollbarPosition="defaultPosition"
@@ -46,10 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/rabbit"
-        android:id="@+id/imageView54"
-        android:layout_marginTop="180dp"
-        android:layout_marginLeft="510dp"
+        android:id="@+id/imageView53sp1"
+        android:layout_marginTop="160dp"
         android:verticalScrollbarPosition="defaultPosition"
+        android:layout_marginLeft="150dp"
         android:visibility="invisible" />
 
     <ImageView
@@ -79,6 +69,16 @@
         android:id="@+id/imageView57"
         android:layout_marginTop="180dp"
         android:layout_marginLeft="440dp"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rabbit"
+        android:id="@+id/imageView54"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="510dp"
         android:verticalScrollbarPosition="defaultPosition"
         android:visibility="invisible" />
 
